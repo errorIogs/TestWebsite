@@ -1,48 +1,35 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
-var metarray = [];
-function loop(){
+var buttonnames = [
+  "Home",
+  "Travel",
+  "Hookers"
+]
+function createbuttons(){
   let arr = []
-  for(let i = 0;i<30;i++){
-    let cn = ""
-    if(i%2 == 0){
-      cn = "Red"
-    }else{
-      cn = "Blue"
-    }
-    arr.push(<img src="https://i.pinimg.com/originals/3c/32/56/3c32567ab206c7c3b575e559d5c8851a.jpg" className={cn} key={i} onClick={()=>console.log("hi")}></img>)
-    
+  for(let i = 0;i<buttonnames.length;i++){
+    arr.push(<button key={buttonnames[i]}>{buttonnames[i]}</button>)
   }
-  return arr
-}
-function loop2(){
-  let arr = []
-  for(let i = 0;i<10;i++){
-    arr.push(
-      <div className="card">
-
-        {
-          loop()
-        }
-        
-      </div>
-    )
-  }
-  console.log(arr)
-  return arr
+  return (
+    arr
+  )
 }
 function App() {
-  var [count, setCount] = useState(0)
-  console.log(metarray)
-  return (
-    <div className="App">
-      
+  return(
+    <>
+    <div id = "header">
+      <div id = "buttoncontainer">
       {
-        loop2()
+       createbuttons ()
       }
-      
+        
+      </div>
     </div>
+    <img id = "bgi" src='https://wallpapers.com/images/hd/4k-beach-with-wooden-bridge-px78bdam931f7ifn.jpg' >
+      
+    </img>
+    </>
   )
 }
 
