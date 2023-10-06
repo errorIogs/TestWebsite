@@ -2,14 +2,32 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 var buttonnames = [
-  "Home",
-  "Travel",
-  "Hookers"
+  {
+    "Label" : "Home",
+    "Link" :"https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUJcmljayByb2xs"
+  },
+  {
+    "Label" : "Travel",
+    "Link" :"https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUJcmljayByb2xs"
+  },
+  {
+    "Label" : "Cheese",
+    "Link" :"https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUJcmljayByb2xs"
+  },
+  {
+    "Label" : "Piiza",
+    "Link" :"https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUJcmljayByb2xs"
+  }
 ]
+function Clicked(l){
+  console.log("hi")
+}
 function createbuttons(){
   let arr = []
   for(let i = 0;i<buttonnames.length;i++){
-    arr.push(<button key={buttonnames[i]}>{buttonnames[i]}</button>)
+    arr.push(<button key={buttonnames[i].Label} onMouseDown  = "Clicked() " >
+      <a key={buttonnames[i].Label} href = {buttonnames[i].Link}  >{buttonnames[i].Label}</a>
+    </button>)
   }
   return (
     arr
