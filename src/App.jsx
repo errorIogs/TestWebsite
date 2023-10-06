@@ -14,7 +14,7 @@ var buttonnames = [
     "Label" : "Cheese",
     "Link" :"https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUJcmljayByb2xs"
   },
-  {
+  { 
     "Label" : "Piiza",
     "Link" :"https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUJcmljayByb2xs"
   }
@@ -26,7 +26,6 @@ function createbuttons(){
   let arr = []
   for(let i = 0;i<buttonnames.length;i++){
     arr.push(<button key={buttonnames[i].Label} className =  "buttons" onMouseDown  = "Clicked() " >
-      <a key={buttonnames[i].Label} href = {buttonnames[i].Link}  >{buttonnames[i].Label}</a>
     </button>)
   }
   return (
