@@ -19,6 +19,9 @@
   display: flex;
   
 }
+.buttons{
+  width: 100%;
+}
 #header{
   width: 99.9%;
   position: fixed;

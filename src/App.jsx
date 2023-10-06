@@ -25,7 +25,7 @@ function Clicked(l){
 function createbuttons(){
   let arr = []
   for(let i = 0;i<buttonnames.length;i++){
-    arr.push(<button key={buttonnames[i].Label} onMouseDown  = "Clicked() " >
+    arr.push(<button key={buttonnames[i].Label} className =  "buttons" onMouseDown  = "Clicked() " >
       <a key={buttonnames[i].Label} href = {buttonnames[i].Link}  >{buttonnames[i].Label}</a>
     </button>)
   }
@@ -37,7 +37,7 @@ function App() {
   return(
     <>
     <div id = "header">
-      <div id = "buttoncontainer">
+      <div   id = "buttoncontainer">
       {
        createbuttons ()
       }
